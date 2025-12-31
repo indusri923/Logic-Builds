@@ -1,0 +1,41 @@
+import java.util.Scanner;
+class Person {
+    Scanner sc = new Scanner(System.in);
+    void personalDetails() {
+       System.out.println("Enter personal Details:");
+       System.out.print("Name: ");
+       String name = sc.nextLine();
+       System.out.print("Age: ");
+       int age = sc.nextInt();
+       sc.nextLine();
+       System.out.print("Gender: ");
+       String gender = sc.nextLine();
+       System.out.print("City: ");
+       String city = sc.nextLine();
+       System.out.println("\nPersonal Details:");
+       System.out.println("name   :  " + name);
+       System.out.println("Age    :  " + age);
+       System.out.println("Gender :  " + gender);
+       System.out.println("City   :  " + city);
+   }
+   void qualificationDetails() {
+      System.out.println("\nEnter Qualification Details:");
+      System.out.print("Degree: ");
+      String degree = sc.nextLine();
+      System.out.print("Branch: ");
+      String branch = sc.nextLine();
+      System.out.print("University: ");
+      String university = sc.nextLine();
+      System.out.print("Year: ");
+      int year = sc.nextInt();
+      System.out.println("\nQualification Details:");
+      System.out.println("Degree     :  " + degree);
+      System.out.println("Branch     :  " + branch);
+      System.out.println("University :  " + university);
+      System.out.println("Year       :  " + year);
+  }
+  public static void main(String[] args) {
+      Person p = new Person();
+      p.personalDetails();
+      p.qualificationDetails();
+   }
