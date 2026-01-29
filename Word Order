@@ -1,0 +1,17 @@
+if __name__ == '__main__':
+    n = int(input().strip())
+    words = []
+    counts = {}
+    
+    for _ in range(n):
+        word = input().strip()
+        if word not in counts:
+            words.append(word)   # preserve order of first appearance
+            counts[word] = 1
+        else:
+            counts[word] += 1
+    
+    # Print number of distinct words
+    print(len(words))
+    # Print counts in order of appearance
+    print(' '.join(str(counts[w]) for w in words))
