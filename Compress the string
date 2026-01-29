@@ -1,0 +1,13 @@
+from itertools import groupby
+
+# Read input
+s = input().strip()
+
+# Apply groupby
+result = []
+for char, group in groupby(s):
+    count = len(list(group))   # number of consecutive occurrences
+    result.append(f"({count}, {char})")
+
+# Print with spaces between tuples
+print(" ".join(result))
