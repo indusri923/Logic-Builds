@@ -1,0 +1,28 @@
+def solve():
+    n, k = map(int, input().split())
+    a = list(map(int, input().split()))
+    to = []
+    mo = []
+
+    for i in range(n):
+        if i % 2 == 0:
+            mo.append(a[i])
+        else:
+            to.append(a[i])
+
+    to.sort()
+    mo.sort(reverse=True)
+
+    for i in range(min(len(to), len(mo))):
+        if to[i] < mo[i] and k > 0:
+            to[i], mo[i] = mo[i], to[i]
+            k -= 1
+
+    t_sum = sum(to)
+    m_sum = sum(mo)
+
+    print("YES" if t_sum > m_sum else "NO")
+
+t = int(input())
+for _ in range(t):
+    solve()
